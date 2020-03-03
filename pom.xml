@@ -150,4 +150,11 @@
         </plugins>
     </build>
 
+    <developers>
+        <developer>
+            <name>Jorge Jau</name>
+            <email>jorgejaujr@gmail.com</email>
+        </developer>
+    </developers>
+
 </project>
