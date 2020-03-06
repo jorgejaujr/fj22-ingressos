@@ -16,9 +16,9 @@ public class SessaoForm {
 	@NotNull
 	private Integer salaId;
 	
-	@DateTimeFormat(pattern="Hh:mm")
+	@DateTimeFormat(pattern="HH:mm")
 	private LocalTime horario;
-	
+	@NotNull
 	private Integer filmeId;
 	
 	public Sessao toSessao(SalaDao salaDao, FilmeDao filmeDao) {
