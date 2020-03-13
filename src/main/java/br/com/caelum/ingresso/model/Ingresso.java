@@ -3,26 +3,27 @@ package br.com.caelum.ingresso.model;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
-import org.hibernate.type.EnumType;
-import org.springframework.data.annotation.Id;
+
 
 import br.com.caelum.ingresso.controller.TipoDeIngresso;
 
+@Entity
 public class Ingresso {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@ManyToOne
 	private Sessao sessao;
+	
 	@ManyToOne
 	private Lugar lugar;
 	
 	private BigDecimal preco;
+	
 	@Enumerated(EnumType.STRING)
 	private TipoDeIngresso tipoDeIngresso;
 	
@@ -56,6 +57,10 @@ public class Ingresso {
 	}
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
+	}
+	
+	public Ingresso() {
+		
 	}
 	
 
